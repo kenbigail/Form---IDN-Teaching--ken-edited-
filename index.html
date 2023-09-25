@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendekar - Login</title>
+
+    <style>
+        *{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 236, 236);
+}
+
+form{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    height: 55%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    margin-bottom: 5%;
+    color: rgb(43, 43, 43);
+}
+.container p{
+    font-style: italic;
+}
+span{
+    color: #9747FF;
+}
+.input{
+    height: 8%;
+    width: 69.6%;
+    margin-top: 2.3%;
+    border: 1px solid #9747FF;
+    border-radius: 4px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.btn{
+    height: 8%;
+    width: 76%;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    border: 2px solid #9747ff;
+    border-radius: 4px;
+    background: #9747FF;
+    color: white;
+    transition: background 0.1s ease, color 0.1s ease;
+}
+.btn:hover{
+    background: #ffffff;
+    color: #9747FF;
+}
+.label{
+    margin-bottom: 3%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Pendekar</h1>
+    </div>
+    <form id="login-form">
+        <div class="container">
+            <h1>Join <span>Pendekar</span></h1>
+            <p>Isi form dibawah</p>
+            <input class="input" id="username" type="text" placeholder="Nama">
+            <input class="input" type="password" name="" id="password" placeholder="Password">
+            <button class="btn" type="submit">Join</button>
+            <label class="label">
+                <input type="checkbox" name="checkbox" value="text"> Saya Yakin Bergabung Dengan <span>Pendekar</span>
+              </label>
+        </div>
+    </form>
+    
+
+    <script>
+
+
+document.getElementById("login-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get input values
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // function showAlert() {
+    //     document.getElementById("alert-box").classList.remove("hidden");
+    // }
+
+    // function closeAlert() {
+    //     document.getElementById("alert-box").classList.add("hidden");
+    // }
+
+    // Check username and password (You can replace this with your authentication logic)
+    if (username == 'keenan' && password == '12345') {
+        window.location.href = "home.html";
+    } else {
+        alert('Invalid Username/Password')
+    }
+});
+    </script>
+</body>
+
+</html>
